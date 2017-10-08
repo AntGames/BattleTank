@@ -26,5 +26,14 @@ private:
 	//Moving barel towars crosshair
 	void AimTowardsCrosshair();
 
+	UPROPERTY(EditAnywhere)
+	float CrosshairXLocation = 0.5f;
 
+	UPROPERTY(EditAnywhere)
+	float CrosshairYLocation = 0.5f;
+
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000;
+
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 };

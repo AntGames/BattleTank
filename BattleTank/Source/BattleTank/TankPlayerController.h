@@ -20,7 +20,11 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
+	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
+
 private:
 	//Moving barel towars crosshair
 	void AimTowardsCrosshair();
+
+
 };

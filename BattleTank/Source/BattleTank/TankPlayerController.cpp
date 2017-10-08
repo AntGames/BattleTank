@@ -5,17 +5,25 @@
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Play controller beginplay"));
 
 	ATank* Tank = GetControlledTank();
 	if (Tank) {
-		UE_LOG(LogTemp, Warning, TEXT("GetControlledTank:: %s"), *Tank->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("PlayerTank::ControlledTank:: %s"), *Tank->GetName());
 	}
 	else {
 		UE_LOG(LogTemp, Warning, TEXT("GetControlledTank:: <Missing tank>"));
 	}
 }
 
+void ATankPlayerController::Tick(float DeltaTime) {
+	Super::Tick(DeltaTime);
+
+}
+
+void ATankPlayerController::AimTowardsCrosshair()
+{
+
+}
 
 ATank* ATankPlayerController::GetControlledTank() const
 {
